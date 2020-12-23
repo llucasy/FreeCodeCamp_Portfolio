@@ -68,3 +68,18 @@ hr {
     height: 5px;
     background-color: white;
 }
+
+.container {
+    background-color: brown;
+    min-height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 15px;
+}
+
+article {
+    background-color: chartreuse;
+    height: 300px;
+}
