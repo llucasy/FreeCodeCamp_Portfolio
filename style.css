@@ -1,3 +1,8 @@
+:root {
+    --main-blue: cornflowerblue;
+    --projects-hover: tan;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +17,7 @@ body {
 
 #navbar {
     position: fixed;
-    background-color: cornflowerblue;
+    background-color: var(--main-blue);
     box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.9);
     height: 90px;
     width: 100%;
@@ -37,7 +42,7 @@ body {
 }
 
 #navbar a:hover {
-    background-color: tan;
+    background-color: var(--projects-hover);
 }
 
 #welcome-section {
@@ -49,11 +54,11 @@ body {
 
 #welcome-section h2 {
     font-size: 30px;
-    color: cornflowerblue;
+    color: var(--main-blue);
 }
 
 #projects {
-    background-color: tan;
+    background-color: var(--projects-hover);
     height: 100vh;
     padding-top: 100px;
 }
@@ -80,4 +85,25 @@ img {
     display: block;
     height: 100%;
     width: 100%;
+    transition: opacity 1s ease;
+}
+
+.project-tile {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.35);
+    font-size: 20px;
+    text-align: center;
+    transition: color 1s ease;
+}
+
+.project-tile:hover header {
+    color: var(--main-blue);
+}
+
+.project-tile:hover img {
+    opacity: 0.3;
 }
